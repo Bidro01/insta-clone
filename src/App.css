@@ -1,0 +1,309 @@
+* {
+  border: none;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #fafafa;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  height: 100vh;
+  margin: auto;
+  max-width: 935px;
+  padding: 20px; /* Add padding to main container */
+}
+
+a {
+  text-decoration: none;
+}
+h1 {
+  margin: 20px 0;
+}
+ul {
+  list-style: none;
+}
+
+/* Add this rule to your CSS file */
+.container {
+  margin-top: 20px; /* Adjust the value as needed */
+  /* margin-right: 33px; */
+}
+
+form input {
+  display: block; /* Ensure inputs are block elements */
+  width: 100%; /* Make inputs take full width */
+  margin-bottom: 10px; /* Add margin between inputs */
+}
+
+form button {
+  display: block; /* Ensure button is a block element */
+  width: 100%; /* Make button take full width */
+}
+
+/**
+ * Flex rules
+ */
+
+.flex {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.direction-column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -moz-box-orient: vertical;
+  -moz-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.justify-content-center {
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.align-items-center {
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.flex-wrap {
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+/**
+ * Panels
+ */
+.panel {
+  background-color: #fff;
+  border: 1px solid #dbdbdb;
+  padding: 10px 0;
+}
+
+#auth {
+  margin: 0 20px;
+}
+
+#mobile {
+  display: none; /* Hide the mobile section */
+}
+
+/**
+ * Forms
+ */
+.login-with-fb,
+form {
+  margin: 10px 40px;
+}
+
+.register,
+form {
+  padding: 10px 0;
+}
+
+.login-with-fb {
+  color: #385185;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+form .sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+form input {
+  background: #fafafa;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+  font-size: 12px;
+  margin-bottom: 6px;
+  padding: 9px 0 7px 8px;
+}
+
+form input::placeholder {
+  color: #999;
+}
+
+form input:focus {
+  border: 1px solid #a8a8a8;
+  outline: none;
+}
+
+form button {
+  background-color: #3897f0;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: 600;
+  margin: 8px 0;
+  padding: 5px 9px;
+}
+
+/**
+ * Separator
+ */
+.separator span {
+  background-color: #dbdbdb;
+  height: 1px;
+  width: 100%;
+}
+
+.separator .or {
+  color: #8e8e8e;
+  font-size: 13px;
+  font-weight: 600;
+  margin: 0 18px;
+}
+
+.separator {
+  margin: 10px 40px 18px;
+}
+.separator span:first-child {
+  margin-right: 18px;
+}
+.separator span:last-child {
+  margin-left: 18px;
+}
+
+/**
+ * Register
+ */
+.login-with-fb a {
+  color: #385185;
+}
+
+.login-with-fb > a {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.login-with-fb div a {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.login-with-fb div {
+  margin: 10px 0;
+}
+
+/**
+ * Register
+ */
+.register * {
+  font-size: 14px;
+}
+.register a {
+  color: #3897f0;
+  font-weight: 600;
+}
+
+.register p {
+  color: #262626;
+  margin-right: 5px;
+}
+
+/**
+ * App download
+ */
+.app-download {
+  margin: 20px 0;
+}
+.app-download p {
+  color: #262626;
+  font-size: 14px;
+  margin: 10px 20px;
+}
+.app-download img {
+  height: 40px;
+  margin: 10px 5px;
+}
+
+/**
+ * Footer
+ */
+footer ul {
+  margin-bottom: 16px;
+}
+footer ul li {
+  margin: 0 10px 10px;
+}
+footer ul li a {
+  color: #385185;
+  font-size: 12px;
+}
+footer .copyright {
+  color: #808080;
+}
+footer ul li a,
+footer .copyright {
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/**
+ * Media queries
+ */
+@media screen and (max-width: 767px) {
+  main {
+    margin: 0 auto; /* Remove margins for mobile */
+    padding: 10px; /* Add padding for mobile */
+  }
+
+  #auth {
+    margin: 0; /* Remove margin for mobile */
+  }
+
+  .panel {
+    padding: 20px; /* Add padding to panels for mobile */
+  }
+
+  form {
+    margin: 10px 20px; /* Adjust form margin for mobile */
+  }
+
+  form input,
+  form button {
+    width: 100%; /* Ensure inputs and button take full width */
+  }
+
+  .separator {
+    margin: 10px 20px 18px; /* Adjust separator margin for mobile */
+  }
+
+  .app-download img {
+    height: 30px; /* Adjust image height for mobile */
+  }
+
+  footer .copyright,
+  footer ul li a {
+    font-size: 13px;
+  }
+}
